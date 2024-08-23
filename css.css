@@ -1,0 +1,119 @@
+/* Reset básico para remover margens e padding padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0; /* Fundo cinza claro para contraste */
+}
+#data-atual {
+    font-family: 'Caveat', cursive; 
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 26px; /* Ajuste o tamanho da fonte conforme necessário */
+}
+
+
+/* Estiliza a div "caderno" para ocupar 100% da tela */
+.caderno {
+    width: 100%;
+    height: 100%; /* Ocupar 100% da altura do body */
+    background-color: #f8f4e3; /* Cor de fundo como papel */
+    background-image: linear-gradient(to bottom, transparent 95%, rgba(0, 0, 0, 0.1) 95%);
+    background-size: 100% 42px; /* Espaçamento entre as linhas */
+    padding-top: 20px;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Estiliza a div "titulo" */
+.titulo {
+    text-align: center;
+    margin-bottom: 20px; /* Ajuste a margem se necessário */
+}
+
+/* Estiliza o título */
+.titulo h1 {
+    font-size: 2.5rem;
+    font-family: 'Caveat', cursive; /* Fonte manuscrita */
+    position: relative;
+    bottom: -10px;
+}
+
+/* Estiliza a área de conteúdo */
+.conteudo {
+    flex: 1; /* Faz com que a área de conteúdo ocupe o espaço restante */
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Área para listar as tarefas */
+#tarefas-lista {
+    flex: 1; /* Ocupa o espaço restante */
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+    overflow-y: auto; /* Adiciona rolagem se necessário */
+}
+
+/* Área para o campo de entrada de nova tarefa */
+#nova-tarefa-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f4e3; /* Cor de fundo como papel */
+}
+
+/* Estiliza o campo de entrada de nova tarefa */
+#nova-tarefa {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-family: 'Caveat', cursive;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.tarefa {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Alinha o checkbox e o texto verticalmente */
+    margin-bottom: 10px; /* Espaço entre as tarefas */
+}
+
+.tarefa input[type="checkbox"] {
+    margin-right: 10px; /* Espaço entre o checkbox e o texto */
+    cursor: pointer;
+}
+
+.tarefa input[type="button"] {
+    background-color: #f8f4e3;
+    color: #000000;
+    padding: 3px 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 13px;
+    font-family: 'Caveat', cursive;
+    margin: 4px 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: transform 0.5s ease;
+}
+
+.tarefa input[type="button"]:hover {
+    background-color: #ff0000;
+    transform: scale(1.1);
+}
+
